@@ -1,7 +1,51 @@
+/* Heading style */
 h1 {
     color: red;
 }
 
 h2 {
     color: lightseagreen;
+}
+
+/* Nav Bar Style */
+#nav {
+    list-style-type: none;
+    margin: -8px;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+#nav li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+#nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#nav li a:hover:not(.active) {
+    background-color: darkgray;
+}
+#nav .active {
+    background-color: green;
+}
+
+/*Transition animation (put in all html pages)*/
+body {
+    animation:  transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
 }
